@@ -301,7 +301,7 @@ const admin = { ...base, role: "admin", name: "Петр" }
 
 ```javascript
 student.email = "alex@mail.ru"  // добавить
-delete student.grade            // удалить
+deconste student.grade            // удалить
 ```
 
 **Проверка наличия ключа:**
