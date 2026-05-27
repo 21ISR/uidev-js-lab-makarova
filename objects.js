@@ -5,9 +5,48 @@ const book = {
     pages: "480 стр.",
     available: true,   
 }
-info() {
-    return `${this.title}, ${this.author}, ${this.year}, ${this.pages}`;
-}
-console.log(book.info());
+info(){
+    return `${this.title}, ${this.author}, ${this.year}, ${this.pages} стр.`;
+    }
 
-const {title, author, year, pages}
+
+}
+console.log("1", book.info());
+
+const {title, author, rating = 0} = book
+console.log(title, author, rating)
+
+
+const students = [
+  { name: "Анна", grade: 4.8, passed: true },
+  { name: "Борис", grade: 2.9, passed: false },
+  { name: "Вера", grade: 3.5, passed: true },
+  { name: "Григорий", grade: 4.1, passed: true },
+  { name: "Дарья", grade: 2.5, passed: false },
+]
+
+const passstud = students.filter(s => s.passed === true);
+const passname = passstud.map(s => s.name);
+console.log(assname)
+
+const top = students.find(s => s.grade > 4.5);
+console.log(top);
+
+const total = students.reduce((acc, s) => acc + s.grade, 0);
+const tot = total / students.length;
+console.log(tot.toFixed(2))
+
+function us(user1, user2){
+    return{...user1, ...user2}
+}
+
+const u1 = {name: "Иван", age: 20, city: "Казань"}
+const u2 = {name: "Иван Петров", email:ivan@mail.ru, city: "Москва"}
+console.log("4", us(u1, u2))
+
+function field(arr, field){
+    return arr.reduce((acc, item) => {
+        const key = item[feld] acc[key] = (acc[key] 0) + 1
+        return acc
+    },    {})
+}
